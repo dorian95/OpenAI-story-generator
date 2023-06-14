@@ -1,7 +1,7 @@
 const openai = require("../config/openaiConfig");
 
 const generateMeta = async (req, res) => {
-    const { title } = req.body()
+    const { title } = req.body
 
     const description = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
